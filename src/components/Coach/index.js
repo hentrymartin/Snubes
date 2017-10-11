@@ -1,6 +1,7 @@
 import React from 'react';
 import { Constants } from './../../constants';
 import { Images } from './../../Images';
+import PropTypes from 'prop-types';
 import './Coach.scss';
 
 const Coach = (props) => {
@@ -17,6 +18,14 @@ const Coach = (props) => {
 			</div>
 		</div>
 	);
+};
+
+Coach.defaultProps = {
+	coach: {},
+};
+
+Coach.proptypes = {
+	coach: PropTypes.object,
 };
 
 export default Coach;

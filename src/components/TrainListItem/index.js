@@ -1,6 +1,7 @@
 import React from 'react';
 import Coach from './../Coach';
 import TimePicker from 'rc-time-picker';
+import PropTypes from 'prop-types';
 import './TrainListItem.scss';
 
 const TrainListItem = (props) => {
@@ -32,6 +33,16 @@ const TrainListItem = (props) => {
 			</div>
 		</div>
 	);
+};
+
+TrainListItem.defaultProps = {
+	onTimingChange: () => {},
+	train: {},
+};
+
+TrainListItem.propTypes = {
+	onTimingChange: PropTypes.func,
+	train: PropTypes.object,
 };
 
 export default TrainListItem;

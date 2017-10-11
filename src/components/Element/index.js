@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { DragSource } from 'react-dnd';
+import PropTypes from 'prop-types';
 import './Element.scss';
 
 const Types = {
@@ -32,27 +33,30 @@ function collect(connect, monitor) {
   };
 }
 
-class Element extends Component {
-	render() {
-		const { connectDragSource } = this.props;
-
-		return connectDragSource(
-			<div className="element">
-				<div className="element__image-wrapper">
-					<img src={this.props.source}/>
-				</div>
-				<div className="element__type">
-					{
-						this.props.type
-					}
-				</div>
-			</div>
-		);
-	}
-}
+const Element = (props) => {
+  const { connectDragSource } = props;
+  return connectDragSource(
+    <div className="element">
+      <div className="element__image-wrapper">
+        <img src={props.source}/>
+      </div>
+      <div className="element__type">
+        {
+          props.type
+        }
+      </div>
+    </div>
+  );
+};
 
 Element.defaultTypes = {
-	type: 'carriage',
+  type: 'carriage',
+	source: '',
+};
+
+Element.proptypes = {
+  type: PropTypes.string,
+  source: PropTypes.string,
 };
 
 export default DragSource(Types.ELEMENT, elementSource, collect)(Element);

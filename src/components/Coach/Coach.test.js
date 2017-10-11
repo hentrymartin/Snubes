@@ -1,21 +1,20 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-15';
+import { configure, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Coach from './index';
 import { Constants } from './../../constants';
+import { Images } from './../../Images';
 
 configure({ adapter: new Adapter() });
 
-test('Coach component based on type', () => {
+test('Test Coach Component image based on type', () => {
 	const coach = {
 		type: Constants.COACH_TYPES.LOCOMOTIVE,
 	};
-  const component = shallow(
+  const component = mount(
   	<Coach
     	coach={coach}
   	/>
 	);
-  let tree = component.toJSON();
-  console.log(tree.find('img'));
+	expect(component.find('img').prop('src')).toEqual(Images.LOCOMOTIVE);
 });

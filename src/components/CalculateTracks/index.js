@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CalculateTracks.scss';
 
 const CalculateTracks = (props) => {
@@ -11,6 +12,10 @@ const CalculateTracks = (props) => {
 
 CalculateTracks.defaultProps = {
 	onCalculateTracks: () => {},
+};
+
+CalculateTracks.defaultProps = {
+	onCalculateTracks: PropTypes.func,
 };
 
 export default CalculateTracks;

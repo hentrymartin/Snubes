@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TrainListItem from './../TrainListItem';
 import DropTargetWrapper from './../DropTarget';
 import './TrainsList.scss';
@@ -27,6 +28,14 @@ const TrainsList = (props) => {
 
 TrainsList.defaultProps = {
 	trains: [],
+	addCoach: () => {},
+	onTimingChange: () => {},
+};
+
+TrainsList.propTypes = {
+	trains: PropTypes.array,
+	addCoach: PropTypes.func,
+	onTimingChange: PropTypes.func,
 };
 
 export default TrainsList;
