@@ -1,0 +1,4 @@
+export const ADD_TRAIN = 'ADD_TRAIN';
+export const ADD_COACH = 'ADD_COACH';
+export const CHANGE_TRAIN_TIMINGS = 'CHANGE_TRAIN_TIMINGS';
+export const CALCULATE_TRACKS = 'CALCULATE_TRACKS';

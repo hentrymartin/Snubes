@@ -1,0 +1,18 @@
+.calc-tracks {
+  display: flex;
+  justify-content: center;
+	button {
+    background: #47bb47;
+    border: transparent;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s all;
+    text-transform: uppercase;
+    &:hover {
+    	background: #4c964c;
+    }
+	}	
+}

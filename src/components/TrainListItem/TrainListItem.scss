@@ -1,0 +1,22 @@
+.train-list-item {
+  display: flex;
+  padding: 10px 10px;
+  border: 1px solid #cacaca;
+  margin-bottom: 3px;
+  margin-top: 2px;
+  flex-direction: column;
+  &__wrapper {
+  	display: flex;
+  	flex-direction: row;
+  }
+  &__coaches {
+  	display: flex;
+    flex: 1;
+  }
+  &__duration {
+  	display: flex;
+  	.rc-time-picker {
+  		margin-right: 5px;
+  	}
+  }
+}

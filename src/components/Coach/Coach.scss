@@ -1,0 +1,15 @@
+.coach {
+  display: flex;
+  align-items: center;
+  &__line {
+    display: flex;
+    width: 15px;
+    height: 2px;
+    background: #84c392;
+  }
+  &__image-wrapper {
+  	img {
+  		height: 40px;
+  	}
+  }
+}
