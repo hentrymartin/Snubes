@@ -73,7 +73,7 @@ const CreateTrainReducer = (state = {
 				}),
 			});
 		case types.CALCULATE_TRACKS:
-			if (!checkForLocomotivesInEachTrain(state.trains)) return state;
+			if (!checkForLocomotivesInEachTrain(state.trains) || state.trains.length === 0) return state;
 			return Object.assign({}, state, {
 				numberOfTracks: calculateTracks(state.trains, 0),
 			});
