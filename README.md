@@ -17,3 +17,5 @@
 4. Redux
 5. Jest(for unit testing)
 6. React DnD(Drag and Drop library)
+
+If needed any clarification, please mail to hentrymartin.p@gmail.com
