@@ -1,8 +1,9 @@
+@import './../../public/scss/common/variables.scss';
 .calc-tracks {
   display: flex;
   justify-content: center;
 	button {
-    background: #47bb47;
+    background: $button-bg-color;
     border: transparent;
     padding: 10px;
     margin-top: 10px;
@@ -12,7 +13,7 @@
     transition: 0.5s all;
     text-transform: uppercase;
     &:hover {
-    	background: #4c964c;
+    	background: $button-hover-bg-color;
     }
 	}	
 }

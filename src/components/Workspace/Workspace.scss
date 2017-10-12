@@ -1,9 +1,11 @@
+@import './../../public/scss/common/variables.scss';
+
 .workspace {
 	display: flex;
 	flex: 1;
 	padding: 15px;
 	flex-direction: column;
-	color: #676767;
+	color: $workspace-color;
 	h1 {
 		text-align: center;
 	}

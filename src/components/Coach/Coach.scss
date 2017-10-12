@@ -1,3 +1,5 @@
+@import './../../public/scss/common/variables.scss';
+
 .coach {
   display: flex;
   align-items: center;
@@ -5,7 +7,7 @@
     display: flex;
     width: 15px;
     height: 2px;
-    background: #84c392;
+    background: $coach-bg-color;
   }
   &__image-wrapper {
   	img {
